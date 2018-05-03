@@ -1,0 +1,15 @@
+<view class='wrapper'>
+  <view class='user_info_view'>
+    <!--头像栏  -->
+    <image class='userpic' src='{{userPic}}' mode='widthFix'></image>
+    <!--姓名栏  -->
+    <view class='option'>
+        <input value="{{userName}}" class='username' maxlength='8'></input>
+    </view>
+  </view>
+
+</view>
+ <!-- 加载中   -->
+<view class='loader' wx:if="{{loading}}">
+  <view class='bg-rotate-loader'></view>
+</view> 

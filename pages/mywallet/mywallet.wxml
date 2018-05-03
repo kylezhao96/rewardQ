@@ -1,0 +1,32 @@
+<!--pages/mywallet/mywallet.wxml-->
+<view class='wrapper'>
+  <!-- 加载中   -->
+  <view class='bg-rotate-loader' wx:if="{{loading}}"></view>
+  <block wx:if="{{!loading}}">
+    <!--头部  -->
+    <view class='header'>
+      <view class='blance'>
+        <text class='name'>余额</text>
+        <text class='num'>￥{{account}}</text>
+      </view>
+      <button type='primary'>充值</button>
+    </view>
+    <!--交易记录  -->
+    <view class='recordlist'>
+      <view class='title'>
+        <text>交易记录</text>
+      </view>
+      <view class='recorditem' wx:for="{{recordArray}}" wx:key="id">
+          <text class='recordname'>{{item.name}}</text>
+        <view class='recordright'>
+          <text class='recordsum'>￥{{item.sum}}</text>
+          <text class='recordtime'>{{item.time}}</text>
+        </view>
+      </view>
+    </view>
+    <view class='norecord' wx:if="{{isEmpty}}">
+      <image src='../image/empty.png' mode='widthFix'></image>
+      <text>还没有记录</text>
+    </view>
+  </block>
+</view>

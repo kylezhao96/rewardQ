@@ -1,0 +1,95 @@
+/*上方用户信息展示栏  */
+
+.header {
+  width: 100%;
+  background-color: #ff8022;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.header_view{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  
+}
+
+.login_button {
+  margin: 5% 0;
+  background-color: #f8dcb4;
+  color: #d4925c;
+  width: 300rpx;
+}
+
+.hover-login {
+  background-color: #f8dccc;
+  color: #d4928c;
+}
+/*不要随意改动padding和width，因为已经实现箭头对齐  */
+.viewpart{
+  padding: 5% 5%;
+  width: 82%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.headshot image {
+  clip-path: circle();
+  width: 100rpx;
+}
+
+.nickname {
+  margin-left: 30rpx;
+  color: #fff;
+  font-size: 40rpx;
+}
+
+
+/*栏目的通用样式  */
+
+.bar {
+  background-color: #fff;
+  margin-top: 13rpx;
+  width: 100%;
+  display: flex;
+    flex-direction: column;
+  justify-content: flex-start;
+}
+
+/*子选项统一样式  */
+
+.item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 30rpx 0;
+  font-size: 36rpx;
+  border-top: 2rpx solid #f4f4f4;
+}
+
+/*栏目图标统一样式  */
+.itemicon {
+  width: 6%;
+  padding: 0 5%;
+}
+
+.itemname {
+  width: 30%;
+  font-size: 32rpx;
+}
+
+.tips {
+  color: #bdbdbd;
+  width: 46%;
+  text-align: right;
+  font-size: 28rpx;
+}
+
+.arrowhead {
+  width: 4%;
+  padding: 0 2%;
+}

@@ -1,0 +1,17 @@
+{
+  "pages":[
+    "pages/myinfo/myinfo",
+    "pages/infosetting/infosetting",
+    "pages/itemlist/itemlist",
+    "pages/myfield/myfield",
+    "pages/mywallet/mywallet",
+    "pages/quiz/quiz"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",  
+    "navigationBarTitleText": "找导师",
+    "navigationBarBackgroundColor": "#FF8022",
+    "navigationBarTextStyle": "#fff",
+    "backgroundColor": "#F4F4F4"
+  }
+}

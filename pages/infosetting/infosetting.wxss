@@ -1,0 +1,51 @@
+/* pages/infosetting/infosetting.wxss */
+
+/*最外层  */
+.user_info_view {
+  width: 700rpx;
+  padding: 25rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+}
+.userpic{
+  width: 200rpx;
+  height: 200rpx;
+  clip-path: circle();
+}
+.username{
+  border-bottom: 2rpx solid #F4F4F4;
+}
+/*选项通用样式  */
+.option {
+  width: 450rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+/*选项标题  */
+ .name {
+  width: 20%;
+  text-align: center;
+} 
+/*选项数据  */
+.value{
+  width: 30%;
+  display: flex;
+  justify-content: center;
+}
+/*头像  */
+#headshot image {
+  clip-path: circle();
+  width: 60%;
+}
+/*输入框  */
+.text{
+  width:80%；
+}
+
+

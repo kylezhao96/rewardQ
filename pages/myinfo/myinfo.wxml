@@ -1,0 +1,52 @@
+<!--myinfo.wxml-->
+<view class='wrapper'>
+  <!--login用于用户登陆或展示用户头像昵称-->
+  <view class='header' url='/pages/infosetting/infosetting'>
+    <!--若未登陆，显示登陆按钮-->
+    <button wx:if="{{!loginStatus}}" class='login_button' bindtap='wxLogin' hover-class='hover-login'>登录</button>
+    <!--登陆后，显示用户信息-->
+    <navigator wx:if="{{loginStatus}}" class='header_view' url='../infosetting/infosetting'>
+      <view class='viewpart'>
+        <view class='headshot'>
+          <image src='{{userPic}}' mode='widthFix' ></image>
+        </view>
+        <view class='nickname'>
+          <text>{{userName}}</text>
+        </view>
+      </view>
+      <image class='arrowhead' src='../image/whitearrow.png' mode='widthFix'></image>
+    </navigator>
+  </view>
+
+  <!--信息栏  -->
+  <view id='infobar' class='bar' wx:if="{{loginStatus}}">
+    <navigator wx:for="{{infoitem}}" wx:key="{{itemname}}" class='item' url="{{item.url}}">
+      <image class='itemicon' src='{{item.src}}' mode='widthFix'></image>
+      <text class='itemname'>{{item.text}}</text>
+      <text class='tips'>{{item.tips}}</text>
+      <image class='arrowhead' src='../image/rightarrow.png' mode='widthFix'></image>
+    </navigator>
+  </view>
+  <!--设置栏  -->
+  <view id='setbar' class='bar'>
+    <navigator wx:for="{{setitem}}" wx:key="itemname" class='item' url="{{item.url}}">
+      <image class='itemicon' src='{{item.src}}' mode='widthFix'></image>
+      <text class='itemname'>{{item.text}}</text>
+      <text class='tips'>{{item.tips}}</text>
+      <image class='arrowhead' src='../image/rightarrow.png' mode='widthFix'></image>
+    </navigator>
+  </view>
+  <!--开发工具  -->
+  <view class='bar'>
+    <view wx:for="{{toolitem}}" wx:key="{{itemname}}" class='item' bindtap='{{item.bindtap}}'>
+      <image class='itemicon' src='{{item.src}}' mode='widthFix'></image>
+      <text class='itemname'>{{item.text}}</text>
+      <text class='tips'>{{item.tips}}</text>
+      <image class='arrowhead' src='../image/rightarrow.png' mode='widthFix'></image>
+    </view>
+  </view>
+</view>
+ <!-- 加载中   -->
+<view class='loader' wx:if="{{loading}}">
+  <view class='bg-rotate-loader'></view>
+</view> 

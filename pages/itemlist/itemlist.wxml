@@ -1,0 +1,54 @@
+<!--pages/itemlist/itemlist.wxml-->
+<view class='wrapper'>
+  <!-- 加载中   -->
+  <view class='bg-rotate-loader' wx:if="{{loading}}"></view>
+  <block wx:if="{{!loading}}">
+    <!--顶部标题栏  -->
+    <view class='header'>
+      <view class='question' wx:if="{{needQuestion}}">
+         <text class='questtit'>{{questTit}}</text> 
+        <text class='questcon'>{{questCon}}</text>
+      </view>
+      <!--中间按钮  -->
+      <navigator class='button' wx:if="{{needButton}}" url='{{buttonUrl}}'>
+        <image src="../image/answer.png" binderror='imgError'></image>
+        <text>{{buttonText}}</text>
+      </navigator>
+    </view>
+    <!--中部信息栏  -->
+    <view class='viewnum' wx:if="{{needViewNum}}" wx:if="{{!isEmpty}}">
+      <text>{{itemNum}}个{{itemType}}</text>
+    </view>
+
+    <!--下部内容栏  -->
+    <view class='content'>
+      <view class='noitem' wx:if="{{isEmpty}}">
+        <image src='../image/empty.png'></image>
+        <text>还没有{{itemType}}</text>
+      </view>
+      <view class='itemlist'>
+        <navigator wx:for="{{itemArray}}" wx:for-item="item" wx:key="id" class='item' url='{{item.url}}'>
+          <!--用户信息展示  -->
+          <view class='itemuser' wx:if="{{needItemUser}}">
+            <!--头像  -->
+            <image src='{{item.userPic}}' lazy-load='true' binderror='imgError'></image>
+            <!--用户名  -->
+            <text>{{item.userName}}</text>
+          </view>
+          <!--项目内容  -->
+          <view class='itemmain'>
+            <text class='itemtitle' wx:if="{{needItemTit}}">{{item.title}}</text>
+            <text class='itemcontent'>{{item.content}}</text>
+          </view>
+          <!--时间、数量、点赞信息  -->
+          <view class='iteminfo'>
+            <text>{{item.time}}</text>
+            <text>{{item.num}}</text>
+            <text>{{item.answered}}</text>
+            <text>{{item.adapted}}</text>
+          </view>
+        </navigator>
+      </view>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,43 @@
+/* pages/myfield/myfield.wxss */
+.container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.item{
+  display: flex;
+  width: 700rpx;
+  padding: 25rpx;
+  background-color: #fff;
+  flex-direction: row;
+  margin-bottom: 2rpx;
+  align-items: center;
+}
+.item image{
+  width: 80rpx;
+  margin-right: 20rpx;
+}
+.content{
+  display: flex;
+  flex-direction: column;
+  width: 450rpx;
+  margin-right: 20rpx;
+}
+.itemname{
+}
+.itemintro{
+  font-size: 28rpx;
+   color: #bdbdbd;
+  font-weight: light;
+   /*   overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; */
+}
+
+.item button{
+  width: 130rpx;
+  font-size: 34rpx;
+  white-space:nowrap;
+  padding: 0;
+}

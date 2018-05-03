@@ -1,0 +1,13 @@
+<!--pages/myfield/myfield.wxml-->
+<view class='wrapper'>
+  <view class='container'>
+    <view class='item' wx:for="{{itemArray}}" wx:key="id">
+      <image src='{{item.image}}' mode='widthFix'></image>
+      <view class='content'>
+        <text class='itemname'>{{item.name}}</text>
+        <text class='itemintro'>此领域有{{item.userNum}}人关注，包含{{item.questNum}}个问题</text>
+      </view>
+      <button id='{{item.id}}' type='{{item.type}}' disabled='{{item.disable}}' bindtap='updateField'>{{item.buttontext}}</button>
+    </view>
+  </view>
+</view>
